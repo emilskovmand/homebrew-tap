@@ -1,8 +1,8 @@
 class Prbar < Formula
   desc "Menu bar app for your open GitHub PRs and the AI agents working on them"
   homepage "https://github.com/emilskovmand/prbar"
-  url "https://github.com/emilskovmand/prbar/archive/refs/tags/v0.1.7.tar.gz"
-  sha256 "deaeb90110a1c127aa44df6d03015ec6539899923151896c8ee1b295d64de482"
+  url "https://github.com/emilskovmand/prbar/archive/refs/tags/v0.1.8.tar.gz"
+  sha256 "047c6244174cc09d654275af126b27217d96c71767410f29d7c4b7ca2fa2a7f7"
   head "https://github.com/emilskovmand/prbar.git", branch: "main"
 
   depends_on macos: :sequoia
@@ -37,6 +37,8 @@ class Prbar < Formula
 
       Or open it once without the service:
         open #{opt_prefix}/PRBar.app
+
+      Once it has run, you can also open it by searching for PRBar in Spotlight.
 
       PRBar reads your open PRs with the GitHub CLI, so make sure it's logged in:
         gh auth login
