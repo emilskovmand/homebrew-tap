@@ -1,8 +1,8 @@
 class Prbar < Formula
   desc "Menu bar app for your open GitHub PRs and the AI agents working on them"
   homepage "https://github.com/emilskovmand/prbar"
-  url "https://github.com/emilskovmand/prbar/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "ed4db0773d735f14eee472ec0dee4b2246927c0ecb9c9434220762b85a8c2a7a"
+  url "https://github.com/emilskovmand/prbar/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "9ab25877d2da208f13112b1a55d461a79cb6807760cff54ae49a1996a61fd6cb"
   head "https://github.com/emilskovmand/prbar.git", branch: "main"
 
   depends_on macos: :sequoia
@@ -16,6 +16,8 @@ class Prbar < Formula
     (app/"Contents/MacOS").mkpath
     cp ".build/release/PRBar", app/"Contents/MacOS/PRBar"
     cp "Resources/Info.plist", app/"Contents/Info.plist"
+    # PRBar compares this against the newest release tag to offer in-app updates.
+    system "/usr/libexec/PlistBuddy", "-c", "Set :CFBundleShortVersionString #{version}", app/"Contents/Info.plist"
     system "codesign", "--force", "--sign", "-", app
 
     # `prbar --dump` prints what the panel would show.
