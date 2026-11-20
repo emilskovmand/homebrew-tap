@@ -1,12 +1,12 @@
 class Prbar < Formula
   desc "Menu bar app for your open GitHub PRs and the AI agents working on them"
   homepage "https://github.com/emilskovmand/prbar"
-  url "https://github.com/emilskovmand/prbar/archive/refs/tags/v0.1.38.tar.gz"
-  sha256 "43e72fca302ce398704fafb25e3bcdba6ecdccd38eee596cc00c5243bb578d87"
+  url "https://github.com/emilskovmand/prbar/archive/refs/tags/v0.1.39.tar.gz"
+  sha256 "9499da13b7412b275865802175f62f3959134890380aa1ed05bfc57aca1a59cb"
   head "https://github.com/emilskovmand/prbar.git", branch: "main"
 
-  depends_on macos: :sequoia
   depends_on "gh"
+  depends_on macos: :sequoia
 
   def install
     # Built from source: a locally built, ad-hoc signed app isn't quarantined, so Gatekeeper lets it run.
