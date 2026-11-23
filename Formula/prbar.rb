@@ -1,8 +1,8 @@
 class Prbar < Formula
   desc "Menu bar app for your open GitHub PRs and the AI agents working on them"
   homepage "https://github.com/emilskovmand/prbar"
-  url "https://github.com/emilskovmand/prbar/archive/refs/tags/v0.1.39.tar.gz"
-  sha256 "9499da13b7412b275865802175f62f3959134890380aa1ed05bfc57aca1a59cb"
+  url "https://github.com/emilskovmand/prbar/archive/refs/tags/v0.1.40.tar.gz"
+  sha256 "bbc72b305e6363f4ea4f67abbda63eb4250bbbbb1c4e85cd498ed1fbe6d34d09"
   head "https://github.com/emilskovmand/prbar.git", branch: "main"
 
   depends_on "gh"
